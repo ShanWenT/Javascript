@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function 1</title>
+  </head>
+  <body>
+    <script>
+      // function add(fn, sn) {
+      //   var res = fn + sn;
+      //   return res;
+      // }
+      // var sum = add(10, 20);
+      // document.write(sum, "<br/>");
+
+      // function hoisting - function declaration will automatically be moved up
+      var sum = add(10, 20);
+      document.write(sum, "<br/>");
+      function add(fn, sn) {
+        var res = fn + sn;
+        return res;
+      }
+
+      //sum2(1, 2, 3);
+      // function expression does not support function hoisting
+      var sum2 = function (q, w, e) {
+        return document.write(q + w + e, "<br/>");
+      };
+      sum2(1, 2, 3);
+
+      //Named function Expression
+      var fact = function computeFactorial(number) {
+        if (number <= 1) {
+          return 1;
+        }
+        return number * computeFactorial(number - 1);
+      };
+      var res = fact(5);
+      document.write(res);
+
+      var square = function () {
+        var a = 2,
+          b = 2;
+        return a * b;
+      };
+      document.write(square());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Operator</title>
+  </head>
+  <body>
+    <h1>Type Operator</h1>
+    <p>typeof operator returns the type of a given operand</p>
+    <p>comma operator returns the RHS operand value</p>
+    <hr />
+    <script>
+      document.write(typeof 5);
+      document.write("<br>");
+      document.write(typeof "JavaScript");
+      document.write("<br>");
+      document.write(typeof true);
+      document.write("<br>");
+      document.write(typeof undefined);
+      document.write("<br>");
+      document.write(typeof null);
+      document.write("<br>");
+      document.write("<br>");
+
+      var num = "string";
+      document.write(typeof num);
+
+      var c = (2, 2) + (3, 5); // omit left side and take only the right side
+      document.write(c);
+      document.write("<br>");
+    </script>
+  </body>
+</html>

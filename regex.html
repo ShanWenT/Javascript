@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex</title>
+  </head>
+  <body>
+    <!--Syntax
+    
+        var pattern = new Regexp(pattern, attributes);
+        var pattern = /pattern/attributes;
+    -->
+    <p>Rexexp in JS</p>
+    <button onclick="myFunc()">Click Here</button>
+    <p id="demo"></p>
+
+    <script>
+      function myFunc() {
+        // var str = "\n Welcome \n to js aka to \n hell 123";
+        // var patt1 = /to/g;
+        //var patt1 = /Welcome/m;
+        //var patt1 = /[^a]/g;
+        // var patt1 = /[12]/g;
+        //var patt1 = /welcome/i;
+
+        var str = "100% Javascript";
+        // var patt1 = /\w/g;
+        // var patt1 = /\d/g;
+        // var patt1 = /\D/g;
+        var patt1 = /\s/g;
+
+        //var result = str.match(patt1);
+        var result = patt1.ignoreCase; // check whether patt1 = /./i
+        var result = patt1.exec(str);
+        document.getElementById("demo").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

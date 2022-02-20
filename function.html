@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+      //1. A function without parameters and without return value
+      function wishHi() {
+        document.write("Hi", "</br>");
+      }
+
+      wishHi();
+      wishHi();
+      wishHi();
+
+      function add2Num(a, b) {
+        return a + b;
+      }
+      let a = 5;
+      let b = 5;
+      document.write(add2Num(10, 20));
+      document.write(add2Num(a, b));
+
+      //2. A function without parameters and with return value
+      function wishHi() {
+        return "Hello";
+      }
+      var rv = wishHi();
+      document.write(rv);
+      document.write(wishHi());
+
+      //3. A function with parameters and without return value
+      function wish(what) {
+        document.write(what, "<br/>");
+      }
+      wish("good afternoon");
+      wish("good night");
+
+      function sum(x, y) {
+        document.write(x + y, "<br/>");
+      }
+      sum(2, 3);
+      sum(10, 20);
+
+      //4. A function with parameters and with return value
+      function mul(a, b) {
+        return document.write(a * b, "<br/>");
+      }
+      mul(5, 5);
+
+      // function expression
+      var wishHi = function () {
+        document.write("Hi", "<br/>");
+      };
+      wishHi();
+
+      var add3Num = function (q, w, e) {
+        return document.write(q + w + e, "<br/>");
+      };
+      add3Num(1, 2, 3);
+    </script>
+  </body>
+</html>

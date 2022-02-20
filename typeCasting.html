@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeCasting</title>
+  </head>
+  <body>
+    <script>
+      document.write(2 + 4.3); // 6.3, 2 converted to 2.0
+      document.write("<br/>");
+      document.write("2" + 2); // 22, 2 converted to "2"
+      document.write("<br/>");
+      //Explicit typecasting built-in function's
+      // 1. eval
+      // 2. parseInt
+      // 3. Parsefloat
+      // 4. escape
+      // 5. unescape
+
+      //eval - eval(expression)
+      let x = 2;
+      let y = 3;
+      let z = 4;
+      document.write(eval("x+y"), "<br/>");
+      document.write(eval(z));
+      document.write("<br/>");
+
+      //parseInt
+      document.write(parseInt(24)); // 24
+      document.write("<br/>");
+      document.write(parseInt(12 + 12)); // 24
+      document.write("<br/>");
+      document.write(parseInt(3.142)); //3
+      document.write("<br/>");
+      document.write(parseInt(1.9 + 1.9)); // 3
+      document.write("<br/>");
+      document.write(parseInt("24")); //24
+      document.write("<br/>");
+      document.write(parseInt("3.142")); //3
+      document.write("<br/>");
+      document.write(parseInt("24sometext")); //24
+      document.write("<br/>");
+      document.write(parseInt("sometext24sometext")); //nan
+      document.write("<br/>");
+      document.write(parseInt("2" + "4"));
+      document.write("<br/>");
+
+      //escape & unescape
+      var str = "Hello world!!?";
+      document.write(escape(str));
+      document.write("<br/>");
+      document.write(unescape(str));
+      document.write("<br/>");
+      document.write(str);
+    </script>
+  </body>
+</html>

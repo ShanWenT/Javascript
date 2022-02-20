@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <h1>String methods in js</h1>
+    <hr />
+    <br />
+    <script>
+      //   //String constructor
+      //   var name1 = new String("I am JS");
+      //   document.write(name1);
+      //   document.write("<br>");
+      //   document.write(typeof name1);
+      //   document.write("<br>");
+
+      //   //String Literal
+      //   var name2 = "I am cool";
+      //   document.write(name2);
+      //   document.write("<br>");
+      //   document.write(typeof name2);
+      //   document.write("<br>");
+
+      //   var name3 = "I am a web developer";
+      //   document.write(name3);
+      //   document.write("<br>");
+
+      //String methods
+
+      var name = "I am Javascript language";
+      document.write(name.length);
+      document.write("<br>");
+      document.write(name.charAt(2));
+      document.write("<br>");
+      document.write(name.charCodeAt(2));
+      document.write("<br>");
+      document.write(name.indexOf("a"));
+      document.write("<br>");
+      document.write(name.lastIndexOf("a"));
+      document.write("<br>");
+      document.write(name.toUpperCase());
+      document.write("<br>");
+      document.write(name.toLowerCase());
+      document.write("<br>");
+      document.write(name.substr(2, 6)); // start from which index and how many elements
+      document.write("<br>");
+      document.write(name.substring(5, 15)); // start & ending index
+      document.write("<br>");
+      document.write(name.slice(5, 15));
+      document.write("<br>");
+      document.write(name.startsWith("I")); // case sensitive
+      document.write("<br>");
+      document.write(name.endsWith("language"));
+      document.write("<br>");
+      document.write("I".concat(" am ", " js "));
+      document.write("<br>");
+
+      var words = name.split(" ");
+      document.write(words[0]);
+      document.write("<br>");
+      document.write(words[1]);
+      document.write("<br>");
+      document.write(words[2]);
+      document.write("<br>");
+      document.write(words[3]);
+      document.write("<br>");
+
+      var number = new String("244");
+      document.write(typeof number);
+      document.write("<br>");
+      document.write(typeof number.valueOf());
+    </script>
+  </body>
+</html>

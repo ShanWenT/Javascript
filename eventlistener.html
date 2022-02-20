@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener in JS</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+      }
+      body,
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .grandparent {
+        width: 200px;
+        height: 204px;
+        background-color: red;
+      }
+      .parent {
+        width: 130px;
+        height: 130px;
+        background-color: blueviolet;
+      }
+      .child {
+        width: 60px;
+        height: 60px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grandparent">
+      <div class="parent">
+        <div class="child"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const grandparent = document.querySelector(".grandparent");
+  const parent = document.querySelector(".parent");
+  const child = document.querySelector(".child");
+
+  //capturing
+  grandparent.addEventListener(
+    "click",
+    (e) => {
+      console.log("Grandparent 1");
+    },
+    { capture: true }
+  );
+
+  //bubbling
+  parent.addEventListener("click", (e) => {
+    console.log("parent 1");
+  });
+
+  child.addEventListener("click", (e) => {
+    console.log("child 1");
+  });
+  document.addEventListener("click", (e) => {
+    console.log("doc 1");
+  });
+  ////////////////
+  child.removeEventListener("click", (e) => {
+    console.log("remove event");
+  });
+</script>

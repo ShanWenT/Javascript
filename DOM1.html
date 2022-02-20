@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM1</title>
+  </head>
+  <body>
+    <h2>New Heading</h2>
+    <h1 id="title">DOM</h1>
+    <h2 id="title">DOM-Querry Selectors</h2>
+    <div class="box">
+      box1
+      <div id="sbox">small box1</div>
+    </div>
+
+    <div class="box">
+      box2
+      <div id="sbox">small box2</div>
+    </div>
+    <div class="box">
+      box3
+      <div id="sbox">small box3</div>
+    </div>
+
+    <hr />
+    <br />
+
+    <script>
+      //const pagetitle = document.querySelector("h2");
+      //const result = document.querySelector("#title");
+      //const result = document.querySelector("#sbox");
+      const result = document.querySelectorAll(".box");
+      console.log(result);
+
+      result.forEach((e) => {
+        e.style.color = "red";
+      });
+    </script>
+  </body>
+</html>

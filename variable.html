@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable</title>
+  </head>
+  <body>
+    <ol>
+      <li>var is function scoped or global while the let & const is block</li>
+      <li>var can be redeclared while let & const cannot be redeclared</li>
+      <li>let can be reassigned while const cannot be reassigned</li>
+      <li>
+        var allow variable hoisting, let & const does not allow variable
+        hoisting
+      </li>
+    </ol>
+
+    <script>
+      if (true) {
+        var v = "this is true";
+      }
+      console.log(v);
+
+      if (true) {
+        let l = "this is true";
+        console.log(l);
+      }
+      if (true) {
+        const a = "this is true";
+        console.log(a);
+      }
+
+      var b;
+      console.log(b);
+      b = 10;
+
+      const c = { name: "ABC" };
+      c.name = "yxz";
+      let d = { name: "plc" };
+      d = "clp";
+      console.log(d);
+      console.log(c);
+    </script>
+  </body>
+</html>

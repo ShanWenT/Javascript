@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects in JS</title>
+  </head>
+  <body>
+    <!--Object & object
+        3 ways of creating object
+        1. object constructor
+        2. object literal
+        3. constructor function
+
+        object literal object = { prop1: value, prop2: value2....} constructor object or
+instance of object var objname = new Object();
+    -->
+
+    <script>
+      // Object constructor
+      // syntax - var Objname = new object();
+
+      var rect1 = new Object(); // prototype
+      var dog = new Object();
+
+      // adding properties
+      // 1. dot notation -> objname.propertyname = value;
+      // 2. Array notation -> objName["propname"] = value;
+
+      rect1.width = 5;
+      rect1["height"] = 15;
+
+      dog.breed = "jr";
+      dog.name = "rex";
+      dog.sleep = "is sleeping";
+
+      rect1.getArea = function () {
+        return this.width * this.height;
+      };
+
+      rect1.getPerimeter = function () {
+        return 2 * this.width + 2 * this.height;
+      };
+
+      dog.getInfo = function () {
+        return dog.name + " is of the breed: " + dog.breed;
+      };
+
+      document.write(rect1.getArea());
+      document.write(dog.getInfo());
+
+      delete rect1.getPerimeter;
+      delete dog.sleep;
+
+      // object literal
+      let ObjName = {
+        property1: "value",
+        property2: "value",
+      };
+
+      employee = {
+        id: 700,
+        name: "John",
+        salary: 30000,
+      };
+      document.write(
+        employee.id + " " + employee.name + " " + employee.salary,
+        "</br>"
+      );
+
+      dog2 = {
+        name: "shona",
+        age: 1,
+      };
+      document.write(dog2.name + " is " + dog2.age + " year old", "</br>");
+
+      areaOfCircle = {
+        radius: 3.5,
+        pi: 3.142,
+        area: function () {
+          return this.pi * this.radius * this.radius;
+        },
+      };
+      //   areaOfCircle.area =
+      //     areaOfCircle.pi * areaOfCircle.radius * areaOfCircle.radius;
+      document.write(areaOfCircle.area(), "<br>");
+
+      //Object constructor
+      //   var emp = new Object();
+      //   emp.id = 701;
+      //   emp.name = "Manu";
+      //   emp.salary = 40000;
+      //   document.write(emp.id + " " + emp.name + " " + emp.salary, "</br>");
+
+      var dog3 = new Object();
+      dog3.name = "Nemu";
+      dog3.age = "7 months old";
+      document.write(dog3.name + " is " + dog3.age, "</br>");
+
+      var areaOfCircle2 = new Object();
+      areaOfCircle2.radius = 3.5;
+      areaOfCircle2.pi = 3.142;
+      areaOfCircle2.area =
+        areaOfCircle2.pi * areaOfCircle2.radius * areaOfCircle2.radius;
+      document.write(areaOfCircle2.area, "</br>");
+
+      //function constructor
+      function employee2(id, name, salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+      }
+      emp = new employee2(702, "Sneha", 300000);
+      document.write(emp.id + " " + emp.name + " " + emp.salary, "</br>");
+
+      function areaOfCircle3(pi, radius) {
+        this.pi = pi;
+        this.radius = radius;
+        return this.pi * this.radius * this.radius;
+      }
+      document.write(areaOfCircle3(3.142, 3.5), "</br>");
+
+      function areaOfCircle4(pi, radius) {
+        this.pi = pi;
+        this.radius = radius;
+        this.area = this.pi * this.radius * this.radius;
+      }
+      aoc = new areaOfCircle4(3.142, 3.5);
+      document.write(aoc.area, "</br>");
+
+      document.write(Math.abs(-4.5791));
+      document.write("</br>");
+      document.write(Math.ceil(4.1111));
+      document.write("</br>");
+      document.write(Math.floor(4.99999));
+      document.write("</br>");
+      document.write(Math.round(4.51));
+      document.write("</br>");
+      document.write(Math.random() * 100);
+      document.write("</br>");
+      document.write(Math.exp(2.4)); // e^2.4
+      document.write("</br>");
+      document.write(Math.max(2, 4, 6, 100));
+      document.write("</br>");
+      document.write(typeof aoc.area, "</br>");
+      document.write(Math.trunc(5.37123456789)); // remove decimal
+    </script>
+  </body>
+</html>

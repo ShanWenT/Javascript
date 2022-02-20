@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asynchronous & synchronous</title>
+  </head>
+  <body>
+    <h1>Async JS</h1>
+    <hr />
+    <br />
+    <script>
+      // //synchronous
+
+      // console.log("I");
+      // console.log("....");
+      // console.log("to");
+      // console.log("code");
+      // console.log("Js");
+
+      // //Asynchronous
+
+      // console.log("I");
+      // console.log("....");
+      // setTimeout(() => {
+      //   console.log("to");
+      // }, 3000);
+      // console.log("code");
+      // console.log("Js");
+
+      //   function abc(a, b, c, d){}
+
+      //   const abc = (a,b,c) => {}
+
+      /////////////////////////////////////
+      // function one(call_two) {
+      //   console.log("Func 1 completed, call Func 2");
+      //   call_two();
+      // }
+
+      // function two() {
+      //   console.log("Func 2");
+      // }
+      // one(two);
+      ///////////////////////////////////////
+      // 1.Customer should place the order
+      // 2. choose the company
+      // 3. choose model
+      // 4. start manufacturing
+      // 5. select the drive mode
+      // 6. select the color
+      // 7. deliver the order
+      let stocks = {
+        company: ["Ferrari", "Benz", "BMW", "ford"],
+        models: ["SF", "SLS", "7s", "mustang"],
+        driveMode: ["auto", "manual"],
+        color: ["white", "black", "red"],
+      };
+
+      //console.log(stocks.company[1]);
+
+      let order = (company_name, call_production) => {
+        setTimeout(() => {
+          console.log(`${stocks.company[company_name]} was selected`);
+          call_production();
+        }, 2000);
+      };
+      let production = () => {
+        setTimeout(() => {
+          console.log("production has started");
+          setTimeout(() => {
+            console.log("Customer choose the model");
+
+            setTimeout(() => {
+              console.log(`${stocks.models[1]} was selected`);
+
+              setTimeout(() => {
+                console.log("Manufacturing was started");
+
+                setTimeout(() => {
+                  console.log(`${stocks.driveMode[1]} was selected`);
+
+                  setTimeout(() => {
+                    console.log(`${stocks.color[1]} was selected`);
+
+                    setTimeout(() => {
+                      console.log("Car was delivered");
+                    }, 2000);
+                  }, 3000);
+                }, 2000);
+              }, 1000);
+            }, 1000);
+          }, 2000);
+        }, 0000);
+      };
+
+      order("1", production);
+    </script>
+  </body>
+</html>

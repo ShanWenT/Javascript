@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control statement</title>
+  </head>
+  <body>
+    <script>
+      var a;
+      var b;
+      var c;
+      a = 10;
+      b = 20;
+      c = a + b;
+      c %= 2;
+      document.write(c);
+      if (c == 0) {
+        document.write("c is even", "</br>");
+      } else {
+        document.write("c is odd", "</br>");
+      }
+      var grade = -600;
+      if (grade >= 90 && grade <= 100) {
+        document.write("A");
+      } else if (grade >= 80 && grade < 90) {
+        document.write("B");
+      } else if (grade >= 70 && grade < 80) {
+        document.write("C");
+      } else if (grade < 70 && grade >= 0) {
+        document.write("Fail");
+      } else {
+        document.write("invalid");
+      }
+
+      var age = 65;
+
+      if (age >= 25) {
+        if (age <= 60) {
+          document.write("access granted");
+        } else {
+          document.write("access denied");
+        }
+      } else {
+        document.write("access denied");
+      }
+
+      var day = 5;
+      switch (day) {
+        case 1:
+          document.write("monday");
+          break;
+        case 2:
+          document.write("tuesday");
+          break;
+        case 3:
+          document.write("wednesday");
+          break;
+        case 4:
+          document.write("thursday");
+          break;
+        case 5:
+          document.write("friday");
+          break;
+        case 6:
+          document.write("saturday");
+          break;
+        case 7:
+          document.write("sunday");
+          break;
+      }
+    </script>
+  </body>
+</html>

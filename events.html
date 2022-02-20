@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in JS</title>
+  </head>
+  <body onload="PageLoad()">
+    <p id="dt">Click the button to display the alert message...</p>
+    <button onclick="AlertMsg()">Alert</button>
+    <!-- <button onclick="DispDate()">Date</button> -->
+    <button ondblclick="DispDate()">DoubleClick</button>
+
+    <p>Refresh page</p>
+    <p>Once the page loaded alert message displays</p>
+    <img
+      src="/HTML/images/anonymous.jpg"
+      width="200px"
+      height="200px"
+      onload="ImgLoad()"
+      onmouseover="LargeImg(this)"
+      onmouseout="SmallImg(this)"
+    />
+    <img
+      src="/HTML/images/anonymoo.jpg"
+      width="200px"
+      height="200px"
+      alt="QQ"
+      onerror="Imageerror()"
+    />
+    <div
+      style="color: red; font-size: 40px"
+      onmouseover="MouseOver()"
+      onmouseout="MouseOut()"
+    >
+      Welcome to JS
+    </div>
+  </body>
+  <script>
+    function AlertMsg() {
+      alert("Welcome to Events");
+    }
+    function DispDate() {
+      document.getElementById("dt").innerHTML = Date();
+    }
+    function PageLoad() {
+      alert("PageLoadedSuccessfully");
+    }
+    function ImgLoad() {
+      alert("ImageLoadedSuccessfully");
+    }
+    function Imageerror() {
+      alert("IMAGE NO LOAD");
+    }
+    function MouseOver() {
+      alert("JS is not easy");
+    }
+    function MouseOut() {
+      alert("It's a trap, RUN and never look back");
+    }
+    function LargeImg(l) {
+      l.style.width = "300px";
+      l.style.height = "300px";
+    }
+    function SmallImg(l) {
+      l.style.width = "80px";
+      l.style.height = "80px";
+    }
+  </script>
+</html>

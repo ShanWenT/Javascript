@@ -1,0 +1,39 @@
+JavaScript Functions
+    Block of code, to perform specific task/calculation
+
+Syntax or function Declaration
+function functionName(para1, para2,...){ // function header
+    statements; //function body
+
+    return value; // default=undefined
+}
+function call
+Syntax - functionName(....);
+
+Why function:
+manageability / modularization
+reuseability
+abstraction
+
+Ways to create a function                                           
+1. function Declaration
+2. function expression
+    Anonymous function expression
+    Named function expression
+    self invoking function expression
+3. function constructor
+4. function IIFE
+
+Types of JavaScript function
+
+1. A function without parameters and without return value
+2. A function without parameters and with return value
+3. A function with parameters and without return value
+4. A function with parameters and with return value
+
+Function expression
+Syntax
+var functionname=function(para1, para2,....){
+    statements;
+    return
+}
